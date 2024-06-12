@@ -1059,11 +1059,36 @@ a {
   line-height: 1.87; /* 187.5% */
 }
 
+.pricing-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 276px;
+  height: 56px;
+  border-radius: 31px;
+  border: 1px solid #ff5b2e99;
+}
+
+.toggle-label {
+  color: var(--second-color);
+  text-align: center;
+  font-family: var(--first-font);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1; /* 100% */
+}
+
 .pricing-list {
   display: flex;
   justify-content: space-between;
   width: 994px;
-  margin: 0 auto;
+  margin: 56px auto 0px;
 }
 
 .pricing-item {
@@ -1071,6 +1096,8 @@ a {
   height: 465px;
   border-radius: 20px;
   background: #fff;
+  padding: 30px 28px 43px;
+  box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
 }
 
 .pricing-item__subtitle {
@@ -1100,4 +1127,48 @@ a {
   font-weight: 700;
   line-height: 1.03; /* 103.03% */
   margin-top: 24px;
+}
+
+.pricing-item__btn {
+  width: 246px;
+  height: 44px;
+  border-radius: 39px;
+  border: 1px solid rgba(255, 91, 46, 0.6);
+  background: none;
+  color: #ff5b2e;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1; /* 100% */
+  margin-top: 22px;
+  transition: background 0.3s linear, color 0.3s linear;
+}
+
+.pricing-item__btn:hover {
+  background: #ff5b2e;
+  color: #fff;
+}
+
+.pricing-item__list {
+  margin-top: 24px;
+}
+
+.pricing-item__item + .pricing-item__item {
+  margin-top: 18px;
+}
+
+.pricing-item__item {
+  display: flex;
+  column-gap: 12px;
+  color: #656689;
+  font-family: var(--first-font);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1; /* 100% */
+}
+
+.pricing-item__item::before {
+  content: url(./img/check-icon.png);
 }
