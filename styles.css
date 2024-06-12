@@ -1075,6 +1075,7 @@ a {
 }
 
 .toggle-label {
+  position: relative;
   color: var(--second-color);
   text-align: center;
   font-family: var(--first-font);
@@ -1084,11 +1085,16 @@ a {
   line-height: 1; /* 100% */
 }
 
+.pricing-switch__group input {
+  display: none;
+}
+
 .pricing-list {
   display: flex;
   justify-content: space-between;
   width: 994px;
   margin: 56px auto 0px;
+  padding-bottom: 86px;
 }
 
 .pricing-item {
@@ -1171,4 +1177,62 @@ a {
 
 .pricing-item__item::before {
   content: url(./img/check-icon.png);
+}
+
+/* Review */
+
+.review-row {
+  display: flex;
+  align-items: center;
+}
+
+.review-control {
+  display: flex;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid #ffd1c4;
+  background: none;
+  color: #ff5b2e;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s linear, color 0.2s linear;
+}
+
+.review-control:hover {
+  background: #ff5b2e;
+  color: #ffffff;
+}
+
+.review-body {
+  display: flex;
+  align-items: center;
+  column-gap: 115px;
+}
+
+.review-image {
+  position: relative;
+  width: 274px;
+  height: 427px;
+  border-radius: 999px;
+}
+
+.review-image::before {
+  content: "";
+  position: absolute;
+  width: 274px;
+  height: 350px;
+  background: #ffda54;
+  border-radius: 999px;
+  bottom: 0;
+}
+
+.review-img {
+  position: relative;
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
+  border-radius: 999px;
+  z-index: 1;
 }
