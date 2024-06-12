@@ -908,6 +908,55 @@ a {
   border-radius: 130px;
 }
 
+.team__image {
+  position: relative;
+}
+
+.team__image::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 234px;
+  height: 266px;
+  border-radius: 129.5px;
+  background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+  z-index: -1;
+  bottom: 3px;
+}
+
+.team__image::after {
+  content: url(./img/member011.png);
+  position: absolute;
+  bottom: 3px;
+  left: -17px;
+}
+
+.team__member:nth-child(2) .team__image::before {
+  background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.team__member:nth-child(2) .team__image::after {
+  content: url(./img/member021.png);
+  top: 16px;
+}
+
+.team__member:nth-child(3) .team__image::before {
+  background: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.team__member:nth-child(3) .team__image::after {
+  content: url(./img/member031.png);
+}
+
+.team__member:nth-child(4) .team__image::before {
+  background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+}
+
+.team__member:nth-child(4) .team__image::after {
+  content: url(./img/member041.png);
+  top: 16px;
+}
+
 .team__career {
   color: #656689;
   text-align: center;
@@ -916,7 +965,7 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 1; /* 100% */
-  margin-top: 6px;
+  margin-top: 34px;
 }
 
 .team__name {
@@ -977,3 +1026,5 @@ a {
   width: 100%;
   left: 0;
 }
+
+/* Pricing */
