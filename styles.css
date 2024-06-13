@@ -1059,35 +1059,47 @@ a {
   line-height: 1.87; /* 187.5% */
 }
 
+/* toggle switch */
+
 .pricing-toggle {
   display: flex;
   justify-content: center;
 }
 
-.pricing-switch {
+.pricing-switch__label {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 40px;
   width: 276px;
   height: 56px;
   border-radius: 31px;
   border: 1px solid #ff5b2e99;
 }
 
-.toggle-label {
-  position: relative;
-  color: var(--second-color);
-  text-align: center;
-  font-family: var(--first-font);
+.pricing-switch__label::before {
+  content: "";
+  position: absolute;
+  width: 131px;
+  height: inherit;
+  border-radius: inherit;
+  background: var(--second-color);
+  top: 0;
+  left: 0;
+}
+
+.pricing-switch__name {
+  color: #fff;
+  font-family: Poppins;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
   line-height: 1; /* 100% */
+  z-index: 1;
 }
 
-.pricing-switch__group input {
-  display: none;
-}
+/*  */
 
 .pricing-list {
   display: flex;
