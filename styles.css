@@ -1099,6 +1099,11 @@ a {
   z-index: 1;
 }
 
+input[type="checkbox"]:checked + .pricing-switch__label::before {
+  left: auto;
+  right: 0;
+}
+
 /*  */
 
 .pricing-list {
